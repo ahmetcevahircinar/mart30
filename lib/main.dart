@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'about.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -96,8 +98,18 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
+              'Burayı yeni ekledim',
+            ),
+            const Text(
+              'Burayı yeni ekledim',
+            ),
+            const Text(
+              'Burayı yeni ekledim',
+            ),
+            const Text(
               'You have pushed the button this many times:',
             ),
+            ElevatedButton(onPressed: ()=>gonder(context), child: Text("Abput Sayfası")),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
@@ -112,4 +124,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+void gonder(context){
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const About()),
+  );
 }
